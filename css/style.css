@@ -208,7 +208,8 @@ hr {
 }
 #galeri h3 {
   font-size: 18px;
-  line-height: 8px;
+  line-height: 26px;
+  margin-bottom: 10px;
 }
 
 /* Custom CSS untuk Tata Letak Galeri Majalah */
