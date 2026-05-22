@@ -37,11 +37,11 @@ hr {
 	width: 120px;
 }
 
-#menu, #gallery, #team {
+#menu, #galeri, #tim {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
-#menu, #contact {
+#menu, #kontak {
   background: #f0f0f0;
 }
 
@@ -120,9 +120,9 @@ hr {
   letter-spacing: 1px;
 }
 
-/* home section */
-#home {
-  background: url('../images/home-bg.jpeg') 50% 0 repeat-y fixed;
+/* beranda section (Sudah Diperbaiki dari #home) */
+#beranda {
+  background: url('../images/home-bg.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -138,13 +138,17 @@ hr {
   height: 100vh;
   text-align: center;
 }
-#home h1 {
-  font-size: 20px;
+#beranda h1 {
+  font-size: 48px;
   letter-spacing: 8px;
   font-style: normal;
+  color: #ffffff !important;
   padding-top: 10px;
 }
-#home .btn {
+#beranda h2 {
+  color: #ffffff !important;
+}
+#beranda .btn {
   background: transparent;
   border-radius: 0;
   border: 3px solid #ffffff;
@@ -155,24 +159,24 @@ hr {
   margin-top: 40px;
   transition: all 0.4s ease-in-out;
 }
-#home .btn:hover {
+#beranda .btn:hover {
   background: #ffffff;
   color: #202020;
 }
 
-/* team section */
-#team {
+/* tim section */
+#tim {
   text-align: center;
 }
-#team h3 {
+#tim h3 {
   font-size: 18px;
   line-height: 4px;
 }
-#team h4 {
+#tim h4 {
   color: #5C5C5C;
   padding-top: 24px;
 }
-#team .col-md-4 {
+#tim .col-md-4 {
  padding-top: 42px;
 }
 
@@ -191,36 +195,58 @@ hr {
 }
 
 /* gallery section */
-#gallery {
+#galeri {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-#gallery .col-md-4 {
+#galeri .col-md-4, #galeri .col-md-3 {
   padding-top: 52px;
 }
-#gallery img {
+#galeri img {
   width: 100%;
   padding-bottom: 18px;
 }
-#gallery .col-md-4 div {
-  position: relative;
-  bottom: 18px;
-  padding-bottom: 12px;
-}
-#gallery h3 {
+#galeri h3 {
   font-size: 18px;
   line-height: 8px;
 }
 
-/* contact section */
-#contact {
+/* Custom CSS untuk Tata Letak Galeri Majalah */
+.large-thumb {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.img-large {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 450px;
+}
+.large-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.large-desc h3 {
+    color: #fff !important;
+    margin-top: 0;
+}
+
+/* kontak section */
+#kontak {
   padding-top: 80px;
   padding-bottom: 100px;
 }
-#contact .col-md-8 {
+#kontak .col-md-8 {
   margin-bottom: 32px;
 }
-#contact .form-control {
+#kontak .form-control {
   background: #ffffff;
   border: none;
   border-radius: 0;
@@ -229,13 +255,13 @@ hr {
   margin-bottom: 10px;
   transition: all 0.4s ease-in-out;
 }
-#contact .form-control:focus {
+#kontak .form-control:focus {
   border-color: #f9f9f9;
 }
-#contact input {
+#kontak input {
   height: 48px;
 }
-#contact input[type="submit"] {
+#kontak input[type="submit"] {
   background: transparent;
   border: 2px solid #999;
   border-radius: 10px;
@@ -243,7 +269,7 @@ hr {
   margin-top: 12px;
   height: 50px;
 }
-#contact input[type="submit"]:hover {
+#kontak input[type="submit"]:hover {
   background: #999;
   color: #ffffff;
 }
