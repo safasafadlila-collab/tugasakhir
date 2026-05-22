@@ -120,12 +120,12 @@ hr {
   letter-spacing: 1px;
 }
 
-/* beranda section (Sudah Diperbaiki dari #home) */
+/* beranda section */
 #beranda {
-  background: url('../images/home-bg.jpg') 50% 0 repeat-y fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/home-bg.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
