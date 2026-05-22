@@ -273,13 +273,12 @@ hr {
   background: #999;
   color: #ffffff;
 }
-
 /* footer section */
 footer {
-  background: url('../images/contact-bg.jpeg') 50% 0 repeat-y fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
+  background-image: url('../images/contact-bg.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
   color: #ffffff;
   padding-top: 80px;
   padding-bottom: 80px;
