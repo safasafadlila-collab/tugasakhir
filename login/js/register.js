@@ -2,6 +2,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     e.preventDefault(); 
 
     const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
     const alertBox = document.getElementById("alertBox");
 
@@ -10,12 +11,13 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     alertBox.innerText = "Sedang mendaftarkan akun...";
 
     try {
+        // Mengirimkan action=register lengkap dengan username, email, dan password
         const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: `action=register&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+            body: `action=register&username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
         });
 
         const data = await res.json();
@@ -29,7 +31,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             }, 2000);
         } else {
             alertBox.style.background = "#e44e4e"; 
-            alertBox.innerText = data.message || "Gagal mendaftar. Nama pengguna mungkin sudah dipakai.";
+            alertBox.innerText = data.message || "Gagal mendaftar. Nama atau email mungkin sudah dipakai.";
         }
     } catch (error) {
         alertBox.style.background = "#e44e4e";
