@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         
         if (loginBtn) {
-            loginBtn.innerText = "LOGOUT";
+            loginBtn.innerText = "logout";
             loginBtn.setAttribute("onclick", "goLogout()");
         }
     }
