@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    function goLogin() {
-        window.location.href = "login/index.html";
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const username = localStorage.getItem("username");
+    
+    const userInfo = document.getElementById("userInfo");
+    const loginBtn = document.querySelector("button[onclick='goLogin()']");
+    
+    if (username) {
+        if (userInfo) {
+            userInfo.innerText = "Halo, " + username;
+        }
+        
+        
+        if (loginBtn) {
+            loginBtn.innerText = "LOGOUT";
+            loginBtn.setAttribute("onclick", "goLogout()");
+        }
     }
-
-    function logout() {
-        localStorage.removeItem("username");
-        location.reload();
-    }
-
-    const user = localStorage.getItem("username");
-
-    if (user) {
-        document.getElementById("userInfo").innerText = "Halo, " + user;
-
-        document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">Logout</button>
-        `;
-    }
-
-    window.goLogin = goLogin;
-    window.logout = logout;
-
 });
+
+function goLogout() {
+    localStorage.removeItem("username");
+    location.reload();
+}
